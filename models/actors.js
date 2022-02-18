@@ -23,6 +23,14 @@ const findOne = ( actorId) => {
         .where({ actor_id:  actorId });
 }
 
+const findActorName = (actorName) => {
+    ////Select FROM __ WHERE __
+        return knex
+        .select(['first_name','last_name'])
+        .from('actor')
+        .where({ first_name:  actorName });
+}
+
 const update = ( actorId, bodyToUpdate) => {
         ////info to update      
         return knex
@@ -54,5 +62,6 @@ module.exports = {
     findOne,
     update,
     destroy,
-    softDelete
+    softDelete,
+    findActorName
 }

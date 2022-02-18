@@ -11,6 +11,10 @@ router.get('/actors/:idActor', (actorController.findOneActor));
 router.patch('/actors/:idActor', (actorController.updateOneActor));
 router.delete('/actors/:idActor', (actorController.softDeleteOneActor));
 router.delete('/actors/destroy/:idActor', (actorController.destroyOneActor));
+router.get('/actors/:idActorName', (actorController.findActorName));
+
+
+
 
 //// Rutas para films
 router.post('/films', (filmController.createFilm));

@@ -32,6 +32,16 @@ const findOneActor = (req, res) => {
         })
 }
 
+const findActorName = (req, res) => {
+    ModelActors.findActorName(req.params.idActorName)
+       .then((row)=>{
+           res.status(200).send(row);
+       })
+       .catch((err)=>{
+           res.status(400).send(err.message);
+       })
+}
+
 const updateOneActor = (req, res) => {
      ModelActors.update(req.params.idActor, req.body)
         .then((row)=>{
@@ -68,5 +78,6 @@ module.exports = {
     findOneActor,
     updateOneActor,
     destroyOneActor,
-    softDeleteOneActor
+    softDeleteOneActor,
+    findActorName
 }

@@ -16,6 +16,9 @@ Usar nodemon para levantar el servidor en modo desarrollo.
 
 * [Express](https://expressjs.com/es/) 
 * [Knex JS](https://knexjs.org/)  
+* [DataBase Example] (https://www.postgresqltutorial.com/postgresql-sample-database/)
+
+
  
 
  
